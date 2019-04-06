@@ -1,7 +1,6 @@
 body{
-  background-image: linear-gradient(white, lightgray);
-  background-repeat: no-repeat;
-  height: 900px;
+  background-color: white;
+  height: auto;
 }
 
 .heading{
@@ -13,10 +12,7 @@ body{
   border-bottom: solid;
 }
 
-img{
-  background-color:  white;
 
-}
 
 .reload{
   width: 25mm;
@@ -57,5 +53,6 @@ label{
   height: 50px;
   background-color: darkblue;
   margin-bottom: 25px;
+  color: white;
 }
 
