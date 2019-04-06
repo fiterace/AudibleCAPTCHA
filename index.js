@@ -8,9 +8,9 @@ var MongoClient = mongodb.MongoClient;
 // getting the exp app
 var app = express();
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3040;
 
-var server = app.listen(port, function(){
+var server = app.listen(port, async function(){
     console.log('listening to request on the port ',port);
 
     app.use(express.static('public'));
@@ -31,16 +31,33 @@ var server = app.listen(port, function(){
         "link" : String,
         "name" : String
     })
-    const object_model = mongoose.model("voice",object_schema)
+    const object_model = mongoose.model("animals",object_schema)
     //Generating random ids:
     var collection_names=["animals","instruments"]
     var collection_name = collection_names[Math.floor(Math.random() * collection_names.length)];
     var collection = db[collection_name]
-    var id_list = [];     //this part is not done
+    var id_list=[]
+    
+    id_list = await object_model.aggregate(
+        [{
+            "$match" : {}
+        },
+        {
+            "$project" : {
+                "_id" : 1
+            }
+        }]
+    )
+    console.log(id_list)
+    
     
     var random_id = id_list[Math.floor(Math.random() * id_list.length)];
-    var object = object_model.findOne({_id: random_id}) 
+    var object = object_model.findOne({_id: random_id})
+    
     module.exports = object;
+    
+        
+
 });
 
 
