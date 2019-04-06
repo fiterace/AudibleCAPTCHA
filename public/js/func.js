@@ -1,11 +1,13 @@
-var object = require("/home/shubham/Desktop/Projects/hackathon/index.js")
+var object = require("/home/shubham/Desktop/AudibleCAPTCHA/index")
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
 
 var recognition = new SpeechRecognition();
 var speechrecognitionlist = new SpeechGrammarList();
-$(".play").OnClick(function(){
-    $(".captcha-audio").src = object.link.toString();
-    
+/*
+$(".play").addEventListener("click",function(){
+    $(".captcha-audio").src = object.link;
+    console.log("done")
 })
+*/
