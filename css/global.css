@@ -7,6 +7,20 @@ img{
 
 }
 
+.reload{
+  width: 50mm;
+  height: 50mm;
+  margin-right: 10mm;
+  margin-left: 10mm;
+}
+
+.instruct{
+  width: 50mm;
+  height: 50mm;
+  margin-right: 10mm;
+  margin-left: 10mm;
+}
+
 .box{
   border-style: ridge;
   border-width: thick;
