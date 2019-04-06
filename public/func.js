@@ -5,3 +5,7 @@ var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEv
 
 var recognition = new SpeechRecognition();
 var speechrecognitionlist = new SpeechGrammarList();
+$(".play").OnClick(function(){
+    $(".captcha-audio").src = object.link.toString();
+    
+})
