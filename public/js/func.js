@@ -1,8 +1,8 @@
-var object = require("/home/shubham/Desktop/AudibleCAPTCHA/index")
+var object = require('../..index')
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
-
+console.log(object.object)
 var recognition = new SpeechRecognition();
 var speechrecognitionlist = new SpeechGrammarList();
 /*
